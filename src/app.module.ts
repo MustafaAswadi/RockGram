@@ -4,6 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { ChatGateway } from './chat.gateway';
 import { CommonModule } from './rockgram/common/common.module';
 
 @Module({
@@ -23,7 +24,7 @@ import { CommonModule } from './rockgram/common/common.module';
  
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, ChatGateway],
   
 })
 export class AppModule {}
